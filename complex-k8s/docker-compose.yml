@@ -1,7 +1,9 @@
 version: '3'
 services:
   postgres:
-    image: 'postgres:latest'
+    build:
+      dockerfile: Dockerfile
+      context: ./database
   nginx:
     restart: always
     build:
@@ -17,8 +19,6 @@ services:
       - /app/node_modules
       - ./server:/app
     environment:
-      - REDIS_HOST=redis
-      - REDIS_PORT=6379
       - PGUSER=postgres
       - PGHOST=postgres
       - PGDATABASE=postgres

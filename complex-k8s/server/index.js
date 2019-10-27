@@ -7,25 +7,28 @@ app.use(cors())
 app.use(express.static('build'))
 app.use(bodyParser.json())
 
-/*
+
 // Postgres Client Setup
 const { Pool } = require('pg');
 const pgClient = new Pool({
-  user: keys.pgUser,
-  host: keys.pgHost,
-  database: keys.pgDatabase,
-  password: keys.pgPassword,
-  port: keys.pgPort
+    user: keys.pgUser,
+    host: keys.pgHost,
+    database: keys.pgDatabase,
+    password: keys.pgPassword,
+    port: keys.pgPort
 });
 pgClient.on('error', () => console.log('Lost PG connection'));
 
+/*
 pgClient
-  .query('CREATE TABLE IF NOT EXISTS values (fact INT)')
-  .catch(err => console.log(err));
+    .query('CREATE TABLE IF NOT EXISTS values (fact INT)')
+    .catch(err => console.log(err));
+
 */
 
 // Express Route Handlers
 
+/*
 let facts = [
     {
         "id": 1,
@@ -61,16 +64,16 @@ let facts = [
     }
 ]
 
-app.get('/info', (request, response) => {
-    response.send('<h1>API is working</h1>')
-})
+*/
 
-app.get('/facts', (request, response) => {
-    response.send(facts)
-})
+app.get('/facts', async (request, response) => {
+    const facts = await pgClient.query(`SELECT * FROM facts;`);
+    response.send(facts.rows);
+});
 
-app.get('/facts/:id', (request, response, next) => {
-    response.send(facts[request.params.id])
+app.get('/facts/:id', async (request, response, next) => {
+    const fact = await pgClient.query(`SELECT fact_content FROM facts WHERE fact_id=${request.params.id};`);
+    response.send(fact.rows[0]);
 })
 
 // Error Handling

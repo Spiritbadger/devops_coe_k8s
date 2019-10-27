@@ -27,64 +27,67 @@ pgClient
 // Express Route Handlers
 
 let facts = [
-  {
-    "id": 1,
-    "content": "DevOps, the 'Dev' is silent"
-  },
-  {
-    "id": 2,
-    "content": "If it hurts, do it more often"
-  },
-  {
-    "id": 3,
-    "content": "Adding manpower to a late software project makes it later!"
-  },
-  {
-    "id": 4,
-    "content": "The first 90 percent of the code accounts for the first 90 percent of the development time...The remaining 10 percent of the code accounts for the other 90 percent of the development time."
-  },
-  {
-    "id": 5,
-    "content": "Any fool can write code that a unicorn can understand. Good programmers write code that humans can understand."
-  },
-  {
-    "id": 6,
-    "content": "Premature optimization is the root of all evil."
-  },
-  {
-    "id": 7,
-    "content": "Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it."
-  },
-  {
-    "id": 8,
-    "content": "If you join forces with the unicorns, you will gain a powerful ally."
-  }
+    {
+        "id": 1,
+        "content": "DevOps, the 'Dev' is silent"
+    },
+    {
+        "id": 2,
+        "content": "If it hurts, do it more often"
+    },
+    {
+        "id": 3,
+        "content": "Adding manpower to a late software project makes it later!"
+    },
+    {
+        "id": 4,
+        "content": "The first 90 percent of the code accounts for the first 90 percent of the development time...The remaining 10 percent of the code accounts for the other 90 percent of the development time."
+    },
+    {
+        "id": 5,
+        "content": "Any fool can write code that a unicorn can understand. Good programmers write code that humans can understand."
+    },
+    {
+        "id": 6,
+        "content": "Premature optimization is the root of all evil."
+    },
+    {
+        "id": 7,
+        "content": "Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it."
+    },
+    {
+        "id": 8,
+        "content": "If you join forces with the unicorns, you will gain a powerful ally."
+    }
 ]
 
-app.get('/api/facts', (request, response) => {
-  response.send(facts)
+app.get('/info', (request, response) => {
+    response.send('<h1>API is working</h1>')
 })
 
-app.get('/api/facts/:id', (request, response, next) => {
-  response.send(facts[request.params.id])
+app.get('/facts', (request, response) => {
+    response.send(facts)
+})
+
+app.get('/facts/:id', (request, response, next) => {
+    response.send(facts[request.params.id])
 })
 
 // Error Handling
 const errorHandler = (error, request, response, next) => {
-  console.error(error.message)
+    console.error(error.message)
 
-  if (error.name === 'CastError' && error.kind === 'ObjectId') {
-    return response.status(400).send({ error: 'malformatted id' })
-  } else if (error.name === 'ValidationError') {
-    return response.status(400).json({ error: error.message })
-  }
+    if (error.name === 'CastError' && error.kind === 'ObjectId') {
+        return response.status(400).send({ error: 'malformatted id' })
+    } else if (error.name === 'ValidationError') {
+        return response.status(400).json({ error: error.message })
+    }
 
-  next(error)
+    next(error)
 }
 
 app.use(errorHandler)
 
-const PORT = 5000
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`)
-})
+app.listen(5000, err => {
+    console.log('Listening');
+});

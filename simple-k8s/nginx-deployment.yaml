@@ -3,17 +3,17 @@ kind: Deployment
 metadata:
   name: nginx-deployment
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
-      component: nginx
+      component: web
   template:
     metadata:
       labels:
-        component: nginx
+        component: web
     spec:
       containers:
-        - name: client
+        - name: nginx
           image: nginx
           ports:
             - containerPort: 80

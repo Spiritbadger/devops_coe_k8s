@@ -6,10 +6,10 @@ import factService from './services/facts'
 
 const App = () => {
 
-  const [content, setContent] = useState('Let me teach you facts about DevOps!')
+  const [content, setContent] = useState('Oh hi space traveller! Let me teach you facts about DevOps!')
 
   const handleNextClick = () => {
-    let randomId = Math.floor(Math.random() * (8 - 1 + 1)) + 1
+    let randomId = Math.floor(Math.random() * 15) + 1
     factService
       .getRandom(randomId)
       .then(returnedFact => {

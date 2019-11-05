@@ -6,11 +6,18 @@ CREATE TABLE facts (
 
 INSERT INTO facts (fact_id, fact_content)
 VALUES
-(1, 'DevOps, the Dev is silent'),
+(1, '"DevOps". The "Dev" is silent'),
 (2, 'If it hurts, do it more often'),
 (3, 'Adding manpower to a late software project makes it later!'),
-(4, 'The first 90 percent of the code accounts for the first 90 percent of the development time...The remaining 10 percent of the code accounts for the other 90 percent of the development time.'),
+(4, 'DevOps is not a goal, but a never-ending process of continual improvement'),
 (5, 'Any fool can write code that a unicorn can understand. Good programmers write code that humans can understand.'),
 (6, 'Premature optimization is the root of all evil.'),
-(7, 'Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.'),
-(8, 'If you join forces with the unicorns, you will gain a powerful ally.');
+(7, 'If you think it’s expensive to hire a professional, wait until you hire an amateur.'),
+(8, 'If you join forces with the unicorns, you will gain a powerful ally.'),
+(9, '*Bork Bork*...I mean *making unicorn noises*'),
+(10, 'The most powerful tool we have as developers is automation.'),
+(11, 'You build it, you run it.'),
+(12, 'Worked fine in dev. Ops problem now.'),
+(13, 'I find your lack of DevOps disturbing.'),
+(14, 'Not sure if DevOps is helping my business or automating me out of a job...'),
+(15, 'With Docker, say goodbye to "Works on my computer". Say hello to "Works in my container".');

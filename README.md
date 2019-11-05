@@ -13,14 +13,17 @@ kubectl apply -f simple-k8s/nginx-node-port.yaml
 
 ## complex-k8s
 
-k8s: Contains Kubernetes configuration files for setting up a full stack application.
+__k8s:__
+Contains Kubernetes configuration files for setting up a full stack application.
 
-client: Contains source code and Dockerfile for building the front-end image.
+__client:__
+Contains source code and Dockerfile for building the front-end image.
 
-server: Contains source code and Dockerfile for building the back-end image.
+__server:__
+Contains source code and Dockerfile for building the back-end image.
 
-database: Contains source code and Dockerfile for building the database image.
+__database:__
+Contains source code and Dockerfile for building the database image.
 
 ### Usage
-
 kubectl apply -f complex-k8s/k8s

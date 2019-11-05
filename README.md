@@ -16,6 +16,9 @@ Contains Kubernetes configuration files for setting up an Nginx container using 
 
 ## complex-k8s
 
+![GitHub Logo](/complex-diagram.png)
+Format: ![complex-diagram](url)
+
 __k8s:__
 Contains Kubernetes configuration files for setting up a full stack application.
 

@@ -17,6 +17,7 @@ Contains Kubernetes configuration files for setting up an Nginx container using 
 ## complex-k8s
 
 ![complex-diagram](complex-diagram.png)
+*application architecture*
 
 __k8s:__
 Contains Kubernetes configuration files for setting up a full stack application.
@@ -35,6 +36,6 @@ Contains source code and Dockerfile for creating a Postgres database image with 
 
 
 ### Usage
-All the Docker images needed for the application are already found in Dockerhub. No need to build anything. Just apply configuration files with:
+All the Docker images needed for the application are already pre-built and found in Dockerhub. No need to build anything. Just apply configuration files with:
 
 *kubectl apply -f complex-k8s/k8s*

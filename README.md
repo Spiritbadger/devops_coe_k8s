@@ -5,13 +5,13 @@ Contains Kubernetes configuration files for setting up an Nginx container using 
 
 
 ### Using pod
-kubectl apply -f simple-k8s/nginx-pod.yaml
-kubectl apply -f simple-k8s/nginx-node-port.yaml
+*kubectl apply -f simple-k8s/nginx-pod.yaml*
+*kubectl apply -f simple-k8s/nginx-node-port.yaml*
 
 
 ### Using deployment
-kubectl apply -f simple-k8s/nginx-deployment.yaml
-kubectl apply -f simple-k8s/nginx-node-port.yaml
+*kubectl apply -f simple-k8s/nginx-deployment.yaml*
+*kubectl apply -f simple-k8s/nginx-node-port.yaml*
 
 
 ## complex-k8s
@@ -35,4 +35,4 @@ Contains source code and Dockerfile for creating a Postgres database image with 
 ### Usage
 All the Docker images needed for the application are already found in Dockerhub. No need to build anything. Just apply configuration files with:
 
-kubectl apply -f complex-k8s/k8s
+*kubectl apply -f complex-k8s/k8s*

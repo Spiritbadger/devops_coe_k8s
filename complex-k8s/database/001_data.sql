@@ -14,7 +14,7 @@ VALUES
 (6, 'Premature optimization is the root of all evil.'),
 (7, 'If you think it’s expensive to hire a professional, wait until you hire an amateur.'),
 (8, 'If you join forces with the unicorns, you will gain a powerful ally.'),
-(9, '*Bork Bork*...I mean *making unicorn noises*'),
+(9, '*Bork Bork* ... I mean ... *making unicorn noises*'),
 (10, 'The most powerful tool we have as developers is automation.'),
 (11, 'You build it, you run it.'),
 (12, 'Worked fine in dev. Ops problem now.'),

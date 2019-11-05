@@ -5,12 +5,12 @@ Contains Kubernetes configuration files for setting up an Nginx container using 
 
 
 ### Using pod
-*kubectl apply -f simple-k8s/nginx-pod.yaml*
+*kubectl apply -f simple-k8s/nginx-pod.yaml*<br/>
 *kubectl apply -f simple-k8s/nginx-node-port.yaml*
 
 
 ### Using deployment
-*kubectl apply -f simple-k8s/nginx-deployment.yaml*
+*kubectl apply -f simple-k8s/nginx-deployment.yaml*<br/>
 *kubectl apply -f simple-k8s/nginx-node-port.yaml*
 
 

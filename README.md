@@ -31,6 +31,12 @@ __database:__
 Contains source code and Dockerfile for creating a Postgres database image with initial data.
 
 ### Usage
-All the Docker images needed for the application are already pre-built and found in Dockerhub. No need to build anything. Just apply configuration files with:
+All the Docker images needed for the application are already pre-built and found in Dockerhub. No need to build anything. 
+
+Before deploying anything, define a secret for Postgres password with command:
+
+*kubectl create secret generic pgpassword --from-literal PGPASSWORD=<replace_with_your_secret_password>*
+
+Then just apply configuration files with:
 
 *kubectl apply -f complex-k8s/k8s*

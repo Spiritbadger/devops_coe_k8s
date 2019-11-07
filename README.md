@@ -1,7 +1,5 @@
 # DevOps CoE: Kubernetes
 
-<br/>
-<br/>
 ## simple-k8s
 Contains Kubernetes configuration files for setting up an Nginx container using a pod or a set of containers using a deployment with NodePort service.
 

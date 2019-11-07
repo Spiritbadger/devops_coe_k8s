@@ -2,11 +2,12 @@
 
 ## simple-k8s
 Contains Kubernetes configuration files for setting up an Nginx container using a pod or a set of containers using a deployment with NodePort service.
-<br/>
+<p></p><br/>
 
 ### Usage with pod
 *kubectl apply -f simple-k8s/nginx-pod.yaml*<br/>
 *kubectl apply -f simple-k8s/nginx-node-port.yaml*
+<p></p><br/>
 <br/>
 ![simple-diagram1](nodeport-pod.png)
 

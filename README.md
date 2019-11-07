@@ -33,9 +33,15 @@ Contains source code and Dockerfile for creating a Postgres database image with 
 ### Usage
 All the Docker images needed for the application are already pre-built and found in Dockerhub. No need to build anything. 
 
-Before deploying anything, define a secret for Postgres password with command:
+Before deploying anything for the first time, you will need to:
+
+1. define a secret for Postgres password with command:
 
 *kubectl create secret generic pgpassword --from-literal PGPASSWORD=<replace_with_your_secret_password>*
+
+2. Install Nginx Ingress Controller:
+
+https://kubernetes.github.io/ingress-nginx/deploy/
 
 Then just apply configuration files with:
 

@@ -16,10 +16,10 @@ Contains Kubernetes configuration files for setting up an Nginx container using 
 <br/>
 <br/>
 ![simple-diagram2](nodeport-deployment.png)
-
+<br/><br/>
 ## complex-k8s
 
-*application architecture*
+*application architecture*<br/><br/>
 ![complex-diagram](complex-diagram.png)
 
 __k8s:__

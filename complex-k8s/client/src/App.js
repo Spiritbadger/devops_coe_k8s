@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import './App.css';
+import './App.css'
 import Fact from './components/Fact'
 import Button from './components/Button'
 import factService from './services/facts'
@@ -28,4 +28,4 @@ const App = () => {
   )
 }
 
-export default App;
+export default App

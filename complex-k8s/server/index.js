@@ -1,4 +1,4 @@
-const keys = require('./keys');
+const keys = require('./keys')
 const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
@@ -9,24 +9,24 @@ app.use(bodyParser.json())
 
 
 // Postgres Client Setup
-const { Pool } = require('pg');
+const { Pool } = require('pg')
 const pgClient = new Pool({
   user: keys.pgUser,
   host: keys.pgHost,
   database: keys.pgDatabase,
   password: keys.pgPassword,
   port: keys.pgPort
-});
-pgClient.on('error', () => console.log('Lost PG connection'));
+})
+pgClient.on('error', () => console.log('Lost PG connection'))
 
 app.get('/facts', async (request, response) => {
-  const facts = await pgClient.query(`SELECT * FROM facts;`);
-  response.send(facts.rows);
-});
+  const facts = await pgClient.query(`SELECT * FROM facts`)
+  response.send(facts.rows)
+})
 
 app.get('/facts/:id', async (request, response, next) => {
-  const fact = await pgClient.query(`SELECT fact_content FROM facts WHERE fact_id=${request.params.id};`);
-  response.send(fact.rows[0]);
+  const fact = await pgClient.query(`SELECT fact_content FROM facts WHERE fact_id=${request.params.id}`)
+  response.send(fact.rows[0])
 })
 
 // Error Handling
@@ -45,5 +45,5 @@ const errorHandler = (error, request, response, next) => {
 app.use(errorHandler)
 
 app.listen(5000, err => {
-  console.log('Listening');
-});
+  console.log('Listening')
+})

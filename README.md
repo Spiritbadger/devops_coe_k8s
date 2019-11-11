@@ -18,7 +18,7 @@ Contains Kubernetes configuration files for setting up an Nginx container using 
 ![simple-diagram2](nodeport-deployment.png)
 <br/><br/>
 ## complex-k8s
-A containerized full-stack web application and it's orchestration in Kubernetes.
+A containerized full-stack web application and its orchestration in Kubernetes.
 <br/><br/>
 *application architecture*<br/><br/>
 ![complex-diagram](complex-diagram.png)
